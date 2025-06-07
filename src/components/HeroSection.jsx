@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import EnquiryPopup from "./EnquieryPopup";
+import { Link } from "react-router-dom";
 
 export default function HeroSection({ title, subtitle, description }) {
   const [showPopup, setShowPopup] = useState(false)
@@ -37,12 +38,12 @@ export default function HeroSection({ title, subtitle, description }) {
           >
             Get In Enquiry
           </button>
-          <a
-            href="/services/web-development"
+          <Link
+            to="/services/web-development"
             className="inline-block rounded-full border  border-cyan-400/70 mt-4 px-6 py-4 text-sm font-semibold text-cyan-300 hover:bg-white/5 transition active:scale-95"
           >
             Explore Services
-          </a>
+          </Link>
         </div>
       </motion.div>
       {showPopup && <EnquiryPopup onClose={() => setShowPopup(false)} />}

@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
 import CareersForm from "../components/CareersForm";
+import workCul from "../assets/workCulture.jpg"
 
 export default function Careers() {
   return (
@@ -53,7 +54,7 @@ If you're ready to grow, innovate, and lead, we're ready to welcome you to the t
             </p>
           </div>
           <img
-            src="/images/work-culture.jpg"
+            src={workCul}
             alt="Work culture"
             className="w-full rounded-lg shadow-md"
           />

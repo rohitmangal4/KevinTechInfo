@@ -18,9 +18,9 @@ import ScrollToTop from "./components/Scroll";
 
 export default function App() {
   return (
-    <Router>
-      <ScrollToTop/>
+    <>
       <Routes>
+      <ScrollToTop/>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/projects" element={<Projects />} />
@@ -37,6 +37,6 @@ export default function App() {
       </Route>
       <Route path="*" element={<NotFound />} />
     </Routes>
-    </Router>
+    </>
   );
 }

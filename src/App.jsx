@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Router } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
@@ -14,10 +14,13 @@ import SoftwareDev from "./pages/services/softwaredev";
 import AiAndMl from "./pages/services/aiml";
 import ServicesLayout from "./layouts/ServicesLayout";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./components/Scroll";
 
 export default function App() {
   return (
-    <Routes>
+    <Router>
+      <ScrollToTop/>
+      <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/projects" element={<Projects />} />
@@ -34,5 +37,6 @@ export default function App() {
       </Route>
       <Route path="*" element={<NotFound />} />
     </Routes>
+    </Router>
   );
 }
